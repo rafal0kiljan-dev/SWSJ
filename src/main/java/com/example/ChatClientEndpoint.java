@@ -50,9 +50,9 @@ public class ChatClientEndpoint {
 
     public static void main(String[] args) {
         latch = new CountDownLatch(1);
-        ClientManager client = ClientManager.createClient();
+        var client = ClientManager.createClient();
         try {
-            URI uri = new URI("ws://localhost:8025/folder/app");
+            var uri = new URI("ws://localhost:8025/folder/app");
             client.connectToServer(ChatClientEndpoint.class, uri);
             latch.await();
         } catch (DeploymentException | URISyntaxException | InterruptedException e) {
@@ -60,3 +60,4 @@ public class ChatClientEndpoint {
         }
     }
 }
+
