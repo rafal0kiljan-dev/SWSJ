@@ -31,7 +31,7 @@ public class ChatClientEndpoint {
 
     @OnMessage
     public String onMessage(String message, Session session) {
-        BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+        var bufferRead = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("--- Received " + message);
             String userInput = bufferRead.readLine();
@@ -60,4 +60,5 @@ public class ChatClientEndpoint {
         }
     }
 }
+
 
