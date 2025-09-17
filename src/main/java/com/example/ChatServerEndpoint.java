@@ -11,8 +11,6 @@ import javax.websocket.CloseReason.CloseCodes;
 import javax.websocket.server.ServerEndpoint;
 import javax.websocket.*;
 
-//import org.glassfish.tyrus.server.*;
-
 @ServerEndpoint(value = "/app")
 public class ChatServerEndpoint {
 
@@ -39,3 +37,4 @@ public class ChatServerEndpoint {
                 " closed because " + closeReason);
     }
 }
+
